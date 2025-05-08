@@ -1,0 +1,180 @@
+/* Global styles for the application */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.mat-mdc-card {
+  margin-bottom: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Typography */
+h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+/* Custom Material theme overrides */
+.mat-mdc-table {
+  width: 100%;
+}
+
+.mat-mdc-header-cell {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.mat-mdc-row:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.mat-mdc-card-header {
+  background-color: #f7f7f7;
+  padding: 16px 16px 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mat-mdc-card-content {
+  padding: 0;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 16px;
+  background-color: #fafafa;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Spacing utilities */
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.p-16 {
+  padding: 16px;
+}
+
+/* Form controls */
+.form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-field {
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 8px;
+  }
+  
+  .responsive-table {
+    overflow-x: auto;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Action button styles */
+.action-button {
+  min-width: 36px;
+  padding: 0 8px;
+  margin-left: 8px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #3f51b5;
+}
+
+.breadcrumb:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .mat-icon {
+  margin-right: 4px;
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+}
+
+/* Loading indicator */
+.loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
