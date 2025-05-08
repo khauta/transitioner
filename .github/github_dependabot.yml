@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" # Location of package.json
+    schedule:
+      interval: "weekly" # Check for updates weekly
+    commit-message:
+      prefix: "deps"
+    open-pull-requests-limit: 5
+    ignore:
+      - dependency-name: "typescript" # Example: Ignore specific dependencies if needed
+        versions: ["<5.0.0"] # Example: Ignore updates below version 5.0.0
